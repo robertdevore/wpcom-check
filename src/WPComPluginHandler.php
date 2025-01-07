@@ -108,6 +108,3 @@ class WPComPluginHandler {
         add_option( 'wpcom_plugin_deactivation_notice', $this->learnMoreLink );
     }
 }
-
-// Initialize the class.
-new WPComPluginHandler( plugin_basename( __FILE__ ), 'https://example.com/community-statement' );
