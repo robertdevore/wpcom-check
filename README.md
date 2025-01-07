@@ -27,15 +27,17 @@ composer require robertdevore/wpcom-check
 Include Composer's autoload file in your plugin or theme:
 
 ```
-require_once __DIR__ . '/vendor/autoload.php';
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+    require_once __DIR__ . '/vendor/autoload.php';
+}
 ```
 
 Instantiate the `WPComPluginHandler` class in your plugin's main file:
 
 ```
 use RobertDevore\WPComCheck\WPComPluginHandler;
-    
-new WPComPluginHandler( plugin_basename( __FILE__ ), 'https://domain.com/learn-more' );
+
+new WPComPluginHandler( plugin_basename( __FILE__ ), 'https://domain.com/learn-more/' );
 ```
 
 ### Manual Installation
@@ -49,15 +51,17 @@ git clone https://github.com/robertdevore/wpcom-check.git
 Include the `WPComPluginHandler.php` file in your project:
 
 ```
-require_once 'path/to/WPComPluginHandler.php';
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+    require_once __DIR__ . '/vendor/autoload.php';
+}
 ```
 
 Instantiate the class in your plugin's main file:
 
 ```
 use RobertDevore\WPComCheck\WPComPluginHandler;
-    
-new WPComPluginHandler( plugin_basename( __FILE__ ), 'https://domain.com/learn-more' );
+
+new WPComPluginHandler( plugin_basename( __FILE__ ), 'https://domain.com/learn-more/' );
 ```
 
 ## Usage
@@ -76,11 +80,13 @@ Here is how to use WPCom Check in your plugin:
  * Plugin Name: My Awesome Plugin
  */
 
-require_once __DIR__ . '/vendor/autoload.php';
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+    require_once __DIR__ . '/vendor/autoload.php';
+}
 
 use RobertDevore\WPComCheck\WPComPluginHandler;
 
-new WPComPluginHandler( plugin_basename( __FILE__ ), 'https://domain.com/learn-more' );
+new WPComPluginHandler( plugin_basename( __FILE__ ), 'https://domain.com/learn-more/' );
 ```
 
 ## How It Works
