@@ -27,7 +27,7 @@ composer require robertdevore/wpcom-check
 Include Composer's autoload file in your plugin or theme:
 
 ```
-if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+if ( ! class_exists( 'RobertDevore\WPComCheck\WPComPluginHandler' ) ) {
     require_once __DIR__ . '/vendor/autoload.php';
 }
 ```
