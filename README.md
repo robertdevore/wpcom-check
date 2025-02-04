@@ -51,7 +51,7 @@ git clone https://github.com/robertdevore/wpcom-check.git
 Include the `WPComPluginHandler.php` file in your project:
 
 ```
-if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+if ( ! class_exists( 'RobertDevore\WPComCheck\WPComPluginHandler' ) ) {
     require_once __DIR__ . '/vendor/autoload.php';
 }
 ```
@@ -80,7 +80,7 @@ Here is how to use WPCom Check in your plugin:
  * Plugin Name: My Awesome Plugin
  */
 
-if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+if ( ! class_exists( 'RobertDevore\WPComCheck\WPComPluginHandler' ) ) {
     require_once __DIR__ . '/vendor/autoload.php';
 }
 
